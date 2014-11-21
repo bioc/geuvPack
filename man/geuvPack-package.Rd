@@ -29,10 +29,10 @@ VJ Carey <stvjc@channing.harvard.edu>
 
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
 }
-\references{
-}
+%\references{
+%}
 \keyword{ package }
-\seealso{
-}
-\examples{
-}
+%\seealso{
+%}
+%\examples{
+%}
