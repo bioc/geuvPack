@@ -6,5 +6,5 @@ Description:  FPKM from GEUVADIS, annotated to gencode regions
 Suggests: 
 Depends: GenomicRanges
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
-License: Artistic 2.0
+License: Artistic-2.0
 LazyLoad: yes
