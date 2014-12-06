@@ -1,10 +1,12 @@
 Package: geuvPack
 Title: summarized experiment with expression data from GEUVADIS
-Version: 0.1.2
+Version: 0.1.3
 Author: VJ Carey <stvjc@channing.harvard.edu>
-Description:  FPKM from GEUVADIS, annotated to gencode regions
+Description: FPKM from GEUVADIS, annotated to gencode regions
 Suggests: 
 Depends: GenomicRanges
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
 License: Artistic-2.0
 LazyLoad: yes
+biocViews: ExperimentData, Genome, SequencingData, MicroarrayData,
+        ArrayExpress
