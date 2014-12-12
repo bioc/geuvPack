@@ -105,6 +105,34 @@ Formal class 'SummarizedExperiment' [package "GenomicRanges"] with 4 slots
 \details{
 FPKM as reported in EBI ArrayExpress E-GEUV-1.  Other quantifications
 may be added in future versions of this package.
+
+"500bffeed8e0f770c157e0189e9e50ae" is the output of digest on
+the txt.gz file of quantifications from which the assay data in the
+geuFPKM SummarizedExperiment instance is constructed.  This
+was extracted at Channing Division of Network Medicine on 13 November 2013,
+and verified to be correct for the contents of the URL below on 11 December
+2014.
+
+The README file
+
+\url{http://www.ebi.ac.uk/arrayexpress/files/E-GEUV-1/GeuvadisRNASeqAnalysisFiles_README.txt}
+
+has the following remarks
+
+Quantification file set: \cr
+- Sample set + sample size : \cr
+QC-passed: All QC-passed samples including replicates: 660 (mRNA) or 480 (miRNA) \cr
+QC-passed unique: Nonredundant set of unique samples used in most analyses: 462 (mRNA); 452 (miRNA) \cr
+- Normalization:  \cr
+	None: raw read counts \cr
+	Library depth: Read counts scaled by total number of mapped reads (mRNA), or total number reads mapping to miRNAs (miRNA) per sample, then adjusted to the median of the sample set (45M for mRNA, 1.2M for miRNA) \cr
+	Library depth and transcript length: RPKM \cr
+	Library depth & expressed & PEER: Library depth scaling as above, removal of units with 0 counts in >50% samples, and removal of technical variation by PEER normalization \cr
+\cr
+\cr
+\cr
+- November 5, 2013 update: The file GD462.GeneQuantRPKM.50FN.samplename.resk10.norm.txt.gz that had the normalization as above PLUS an additional transformation of each gene's values to standard normal has been replaced by GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz \cr
+
 }
 \source{
 \url{ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEUV/E-GEUV-1/analysis_results/GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz}
@@ -114,6 +142,8 @@ PMID 24037378
 }
 \examples{
 data(geuFPKM)
+geuFPKM
+sd(assay(geuFPKM)[1,])
 ## maybe str(geuFPKM) ; plot(geuFPKM) ...
 }
 \keyword{datasets}
