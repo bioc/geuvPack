@@ -1,5 +1,6 @@
 \name{geuFPKM}
 \alias{geuFPKM}
+\alias{gs2p}
 \docType{data}
 \title{
 Expression data, gene level FPKM, from GEUVADIS
@@ -53,6 +54,8 @@ PMID 24037378
 data(geuFPKM)
 geuFPKM
 sd(assay(geuFPKM)[1,])
+data(gs2p)
+gs2p[1:10] # from rowRanges - use with extractBySymbols in gQTLBase
 ## maybe str(geuFPKM) ; plot(geuFPKM) ...
 }
 \keyword{datasets}
