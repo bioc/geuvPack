@@ -1,6 +1,8 @@
 \name{geuFPKM}
 \alias{geuFPKM}
+\alias{gsvs}
 \alias{gs2p}
+\alias{gencodeV12}
 \docType{data}
 \title{
 Expression data, gene level FPKM, from GEUVADIS
@@ -8,9 +10,16 @@ Expression data, gene level FPKM, from GEUVADIS
 \description{
 see \code{metadata(geuFPKM)}
 }
-\usage{data("geuFPKM")}
+\usage{data("geuFPKM"); data(gsvs); data(gs2p)}
 \format{
-  A \link{RangedSummarizedExperiment} object.
+  geuFPKM: A \link{RangedSummarizedExperiment} object.
+
+  gsvs: A result from sva::sva
+ 
+  gs2p: a character vector with gene symbols as values and gencode identifiers
+as names
+
+  gencodeV12: a GRanges instance with metadata about V12 gencode genes
 }
 \details{
 FPKM as reported in EBI ArrayExpress E-GEUV-1.  Other quantifications
@@ -56,6 +65,18 @@ geuFPKM
 sd(assay(geuFPKM)[1,])
 data(gs2p)
 gs2p[1:10] # from rowRanges - use with extractBySymbols in gQTLBase
+\dontrun{
+# this is how the gsvs surrogate variable structure
+# was derived
+library(sva)
+library(geuvPack)
+data(geuFPKM)
+popm = model.matrix(~popcode, data=colData(geuFPKM))
+int = popm[,1,drop=FALSE]
+gsvs = sva(assay(geuFPKM), popm, int)
+save(gsvs, file="gsvs.rda")
+}
+
 ## maybe str(geuFPKM) ; plot(geuFPKM) ...
 }
 \keyword{datasets}
