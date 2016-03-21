@@ -1,6 +1,8 @@
 \name{geuvPack-package}
 \alias{geuvPack-package}
 \alias{geuvPack}
+\alias{hasout}
+\alias{protco}
 \docType{package}
 \title{
 summarized experiment with expression data from GEUVADIS
@@ -9,6 +11,11 @@ summarized experiment with expression data from GEUVADIS
 FPKM from GEUVADIS, annotated to gencode regions
 
 could include more things like miRNA read counts
+ 
+protco and hasout are convenience vectors enumerating
+protein coding features and features that appear to
+have outlying values.  The outlier condition for gene
+g is (sd(x)/mad(x)) > 2.
 }
 \details{
 \tabular{ll}{
