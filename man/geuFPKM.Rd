@@ -1,8 +1,8 @@
 \name{geuFPKM}
 \alias{geuFPKM}
-\alias{gsvs}
 \alias{gs2p}
 \alias{gencodeV12}
+\alias{gencodeV12GR}
 \docType{data}
 \title{
 Expression data, gene level FPKM, from GEUVADIS
@@ -10,7 +10,7 @@ Expression data, gene level FPKM, from GEUVADIS
 \description{
 see \code{metadata(geuFPKM)}
 }
-\usage{data("geuFPKM"); data(gsvs); data(gs2p)}
+\usage{data("geuFPKM"); data(gs2p)}
 \format{
   geuFPKM: A \link{RangedSummarizedExperiment} object.
 
