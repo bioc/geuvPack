@@ -1,6 +1,7 @@
 \name{geuFPKM}
 \alias{geuFPKM}
 \alias{gs2p}
+\alias{gen2sym}
 \alias{gencodeV12}
 \alias{gencodeV12GR}
 \docType{data}
@@ -17,7 +18,7 @@ see \code{metadata(geuFPKM)}
   gsvs: A result from sva::sva
  
   gs2p: a character vector with gene symbols as values and gencode identifiers
-as names
+as names; gen2sym has gencode tags as values and symbols as names
 
   gencodeV12: a GRanges instance with metadata about V12 gencode genes
 }
